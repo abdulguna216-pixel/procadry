@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="ПРОКАДРЫ предоставляет персонал для складов, производств и логистических объектов по всей России. Подбор, оформление, вывод и контроль сотрудников."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <title>ПРОКАДРЫ - аутсорсинг персонала для складов и производств</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <button class="logo-btn" onclick="scrollToId('hero')" aria-label="На главную">
+        <svg viewBox="0 0 56 56" class="logo-icon" role="img" aria-hidden="true">
+          <rect x="4" y="4" width="48" height="48" rx="10" fill="#FF7800" />
+          <path d="M16 16h8v12h8V16h8v24h-8v-8h-8v8h-8V16z" fill="#080A0C" />
+          <circle cx="20" cy="40" r="3" fill="#080A0C" />
+          <circle cx="28" cy="40" r="3" fill="#080A0C" />
+          <circle cx="36" cy="40" r="3" fill="#080A0C" />
+        </svg>
+        <div class="logo-text">
+          <p class="logo-title">ПРОКАДРЫ</p>
+          <p class="logo-subtitle">АУТСОРСИНГ ПЕРСОНАЛА</p>
+        </div>
+      </button>
+
+      <nav class="nav-desktop" id="navDesktop">
+        <a href="#hero" onclick="scrollToId('hero'); return false" class="nav-link">Главная</a>
+        <a href="#about" onclick="scrollToId('about'); return false" class="nav-link">О компании</a>
+        <a href="#services" onclick="scrollToId('services'); return false" class="nav-link">Услуги</a>
+        <a href="#process" onclick="scrollToId('process'); return false" class="nav-link">Как работаем</a>
+        <a href="#guarantees" onclick="scrollToId('guarantees'); return false" class="nav-link">Гарантии</a>
+        <a href="#cases" onclick="scrollToId('cases'); return false" class="nav-link">Кейсы</a>
+        <a href="#reviews" onclick="scrollToId('reviews'); return false" class="nav-link">Отзывы</a>
+        <a href="#contacts" onclick="scrollToId('contacts'); return false" class="nav-link">Контакты</a>
+      </nav>
+
+      <div class="header-contact">
+        <svg class="phone-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path class="svg-stroke" d="M5 4h3l2 5-2 1.8a13 13 0 0 0 5.2 5.2L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+        </svg>
+        <div>
+          <a href="tel:88005553535" class="phone-link">8 800 555 35 35</a>
+          <p class="phone-text">Звонок бесплатный</p>
+        </div>
+      </div>
+
+      <button class="cta-button" onclick="scrollToId('quick')">
+        Получить расчет
+        <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path class="svg-stroke" d="M4 6h16M4 12h16M4 18h16" stroke-width="2" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <svg viewBox="0 0 56 56" class="logo-icon" role="img" aria-hidden="true">
+        <rect x="4" y="4" width="48" height="48" rx="10" fill="#FF7800" />
+        <path d="M16 16h8v12h8V16h8v24h-8v-8h-8v8h-8V16z" fill="#080A0C" />
+        <circle cx="20" cy="40" r="3" fill="#080A0C" />
+        <circle cx="28" cy="40" r="3" fill="#080A0C" />
+        <circle cx="36" cy="40" r="3" fill="#080A0C" />
+      </svg>
+      <button class="menu-close" id="menuClose" aria-label="Закрыть меню">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path class="svg-stroke" d="M6 6l12 12M18 6L6 18" stroke-width="2" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#hero" onclick="closeMobileMenu(); scrollToId('hero'); return false">Главная</a>
+      <a href="#about" onclick="closeMobileMenu(); scrollToId('about'); return false">О компании</a>
+      <a href="#services" onclick="closeMobileMenu(); scrollToId('services'); return false">Услуги</a>
+      <a href="#process" onclick="closeMobileMenu(); scrollToId('process'); return false">Как работаем</a>
+      <a href="#guarantees" onclick="closeMobileMenu(); scrollToId('guarantees'); return false">Гарантии</a>
+      <a href="#cases" onclick="closeMobileMenu(); scrollToId('cases'); return false">Кейсы</a>
+      <a href="#reviews" onclick="closeMobileMenu(); scrollToId('reviews'); return false">Отзывы</a>
+      <a href="#contacts" onclick="closeMobileMenu(); scrollToId('contacts'); return false">Контакты</a>
+    </nav>
+    <div class="mobile-menu-contact">
+      <a href="tel:88005553535">8 800 555 35 35</a>
+      <p>Звонок бесплатный</p>
+    </div>
+  </div>
+
+  <main class="main">
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+      <img src="prokadry-01-hero.jpg" alt="Современный склад с персоналом" class="hero-image" />
+      <div class="hero-overlay"></div>
+      <div class="hero-overlay-top"></div>
+      
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="hero-badge-line"></span>
+            <p class="hero-badge-text">АУТСОРСИНГ ПЕРСОНАЛА</p>
+          </div>
+          <h1 class="hero-title">ЗАКРОЕМ ЛЮБУЮ<br>ПОТРЕБНОСТЬ<br><span class="accent">В ПЕРСОНАЛЕ</span></h1>
+          <p class="hero-description">ПРОКАДРЫ - предоставляем персонал для складов, производств и логистических объектов по всей России.</p>
+          <div class="hero-grid">
+            <p>По всей России</p>
+            <p>От нескольких сотрудников до крупных команд</p>
+            <p>Быстрый вывод персонала</p>
+          </div>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="scrollToId('quick')">
+              Получить расчет
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+            <button class="btn btn-secondary" onclick="scrollToId('contacts')">Оставить заявку</button>
+          </div>
+        </div>
+
+        <div class="hero-checklist">
+          <div class="checklist-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+            <p>Оперативный подбор персонала</p>
+          </div>
+          <div class="checklist-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+            <p>Официальное оформление</p>
+          </div>
+          <div class="checklist-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+            <p>Замена сотрудников в кратчайшие сроки</p>
+          </div>
+          <div class="checklist-item">
+            <svg class="check-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+            <p>Полный контроль на объекте</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <p class="stat-value"><span id="stat1">0</span>+</p>
+            <p class="stat-label">лет опыта на рынке</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-value"><span id="stat2">0</span>+</p>
+            <p class="stat-label">сотрудников</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-value"><span id="stat3">0</span>+</p>
+            <p class="stat-label">объектов по всей России</p>
+          </div>
+        </div>
+        <p class="stats-note">Демонстрационные данные: значения легко заменяются на реальные после согласования.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section section-reveal">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="section-badge">О КОМПАНИИ</p>
+            <h2 class="section-title">ПРОКАДРЫ - ВАШ НАДЕЖНЫЙ ПАРТНЕР<br>В СФЕРЕ АУТСОРСИНГА ПЕРСОНАЛА</h2>
+            <p class="section-description">Мы предоставляем квалифицированный персонал для складов, производств и логистических комплексов по всей России. Берем на себя кадровые и операционные вопросы, чтобы вы могли сосредоточиться на развитии бизнеса.</p>
+            <button class="link-button">
+              Узнать больше
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+          </div>
+          <img src="prokadry-02-team.jpg" alt="Команда сотрудников на складе" class="about-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section section-reveal">
+      <div class="container">
+        <h2 class="section-title dark">КВАЛИФИЦИРОВАННЫЙ ПЕРСОНАЛ<br>ДЛЯ ЛЮБЫХ ЗАДАЧ</h2>
+        <p class="section-description dark">Подберем сотрудников под специфику вашего объекта, график и объем работ.</p>
+        
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="prokadry-03-picker.jpg" alt="Комплектовщики" class="service-image" />
+            <div class="service-content">
+              <svg class="service-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M3 7l9-4 9 4-9 4-9-4zm0 0v10l9 4 9-4V7" stroke-width="1.8" /></svg>
+              <h3 class="service-title">Складской персонал</h3>
+              <p class="service-description">Комплектовщики, кладовщики, грузчики, упаковщики</p>
+              <div class="service-link">Подробнее</div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="prokadry-04-production.jpg" alt="Производственный персонал" class="service-image" />
+            <div class="service-content">
+              <svg class="service-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M3 21V9l6 3V9l6 3V5l6 3v13H3z" stroke-width="1.8" /></svg>
+              <h3 class="service-title">Производственный персонал</h3>
+              <p class="service-description">Операторы, разнорабочие, сборщики, фасовщики</p>
+              <div class="service-link">Подробнее</div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="prokadry-05-loaders.jpg" alt="Грузчики" class="service-image" />
+            <div class="service-content">
+              <svg class="service-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M2 7h12v8H2zM14 10h4l4 4v1h-8zM6 18a2 2 0 1 1 0 .01M18 18a2 2 0 1 1 0 .01" stroke-width="1.8" /></svg>
+              <h3 class="service-title">Грузчики</h3>
+              <p class="service-description">Погрузка и разгрузка, перемещение грузов, работа на складе</p>
+              <div class="service-link">Подробнее</div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="prokadry-06-general.jpg" alt="Разнорабочие" class="service-image" />
+            <div class="service-content">
+              <svg class="service-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M4 20l6-6M14 4l6 6-8 8-6-6 8-8z" stroke-width="1.8" /></svg>
+              <h3 class="service-title">Разнорабочие</h3>
+              <p class="service-description">Выполнение вспомогательных и подсобных работ</p>
+              <div class="service-link">Подробнее</div>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="prokadry-07-coordinator.jpg" alt="Индивидуальные решения" class="service-image" />
+            <div class="service-content">
+              <svg class="service-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M4 12h16M12 4v16" stroke-width="1.8" /></svg>
+              <h3 class="service-title">Индивидуальные решения</h3>
+              <p class="service-description">Подбор персонала под конкретные задачи вашего бизнеса</p>
+              <div class="service-link">Подробнее</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section class="why-section section-reveal">
+      <div class="container">
+        <h2 class="section-title">НЕ ПРОСТО ПРЕДОСТАВЛЯЕМ ЛЮДЕЙ -<br>УПРАВЛЯЕМ РЕЗУЛЬТАТОМ</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <p class="why-number">01</p>
+            <h3 class="why-title">Большая база сотрудников</h3>
+            <p class="why-text">Подбор персонала под разные задачи и объемы</p>
+          </div>
+          <div class="why-item">
+            <p class="why-number">02</p>
+            <h3 class="why-title">Оперативный подбор</h3>
+            <p class="why-text">Начинаем работу с заявки без лишней бюрократии</p>
+          </div>
+          <div class="why-item">
+            <p class="why-number">03</p>
+            <h3 class="why-title">Контроль персонала</h3>
+            <p class="why-text">Контролируем выход сотрудников и качество работы</p>
+          </div>
+          <div class="why-item">
+            <p class="why-number">04</p>
+            <h3 class="why-title">Гибкие условия</h3>
+            <p class="why-text">Подстраиваем количество персонала под потребности объекта</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section id="process" class="process-section section-reveal">
+      <div class="container">
+        <h2 class="section-title">ПРОСТОЙ И ПОНЯТНЫЙ ПРОЦЕСС</h2>
+        <div class="process-desktop">
+          <div class="process-line"></div>
+          <div class="process-grid">
+            <div class="process-item">
+              <p class="process-number">01</p>
+              <h3 class="process-title">ЗАЯВКА</h3>
+              <p class="process-text">Оставьте заявку или свяжитесь с нами</p>
+            </div>
+            <div class="process-item">
+              <p class="process-number">02</p>
+              <h3 class="process-title">РАСЧЕТ</h3>
+              <p class="process-text">Формируем предложение под вашу задачу</p>
+            </div>
+            <div class="process-item">
+              <p class="process-number">03</p>
+              <h3 class="process-title">ПОДБОР</h3>
+              <p class="process-text">Находим подходящих кандидатов</p>
+            </div>
+            <div class="process-item">
+              <p class="process-number">04</p>
+              <h3 class="process-title">ВЫХОД НА ОБЪЕКТ</h3>
+              <p class="process-text">Оформляем документы и выводим персонал</p>
+            </div>
+            <div class="process-item">
+              <p class="process-number">05</p>
+              <h3 class="process-title">КОНТРОЛЬ</h3>
+              <p class="process-text">Следим за качеством работы и решаем вопросы</p>
+            </div>
+          </div>
+        </div>
+        <div class="process-mobile">
+          <div class="process-mobile-item">
+            <p class="process-number">01</p>
+            <h3 class="process-title">ЗАЯВКА</h3>
+            <p class="process-text">Оставьте заявку или свяжитесь с нами</p>
+          </div>
+          <div class="process-mobile-item">
+            <p class="process-number">02</p>
+            <h3 class="process-title">РАСЧЕТ</h3>
+            <p class="process-text">Формируем предложение под вашу задачу</p>
+          </div>
+          <div class="process-mobile-item">
+            <p class="process-number">03</p>
+            <h3 class="process-title">ПОДБОР</h3>
+            <p class="process-text">Находим подходящих кандидатов</p>
+          </div>
+          <div class="process-mobile-item">
+            <p class="process-number">04</p>
+            <h3 class="process-title">ВЫХОД НА ОБЪЕКТ</h3>
+            <p class="process-text">Оформляем документы и выводим персонал</p>
+          </div>
+          <div class="process-mobile-item">
+            <p class="process-number">05</p>
+            <h3 class="process-title">КОНТРОЛЬ</h3>
+            <p class="process-text">Следим за качеством работы и решаем вопросы</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEES SECTION -->
+    <section id="guarantees" class="guarantees-section section-reveal">
+      <div class="container">
+        <div class="guarantees-grid">
+          <img src="prokadry-08-guarantees.jpg" alt="Координатор на складе" class="guarantees-image" />
+          <div class="guarantees-content">
+            <p class="section-badge dark">ГАРАНТИИ</p>
+            <h2 class="section-title dark">ВАША УВЕРЕННОСТЬ -<br>НАША ОТВЕТСТВЕННОСТЬ</h2>
+            <div class="guarantees-list">
+              <div class="guarantee-item">
+                <svg class="check-icon dark" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+                <p>Официальное оформление сотрудников</p>
+              </div>
+              <div class="guarantee-item">
+                <svg class="check-icon dark" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+                <p>Контроль выхода персонала</p>
+              </div>
+              <div class="guarantee-item">
+                <svg class="check-icon dark" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+                <p>Оперативная замена сотрудников</p>
+              </div>
+              <div class="guarantee-item">
+                <svg class="check-icon dark" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+                <p>Контроль дисциплины</p>
+              </div>
+              <div class="guarantee-item">
+                <svg class="check-icon dark" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+                <p>Постоянная коммуникация с заказчиком</p>
+              </div>
+              <div class="guarantee-item">
+                <svg class="check-icon dark" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 13l4 4L19 7" stroke-width="2" /></svg>
+                <p>Работа по договору</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COVERAGE SECTION -->
+    <section class="coverage-section section-reveal">
+      <div class="container">
+        <h2 class="section-title">РАБОТАЕМ ПО ВСЕЙ РОССИИ</h2>
+        <p class="section-description">Подбираем персонал для объектов на всей территории Российской Федерации.</p>
+        
+        <div class="coverage-map">
+          <svg viewBox="0 0 1000 460" class="map-svg">
+            <path d="M45 229l46-48 38 10 54-25 64 19 72-37 62 17 72-12 77 26 87-13 58 31-29 30-67 17-42-8-53 20-75 10-76 38-67-26-45 5-70-26-84-8z" fill="#181D20" stroke="#2F383E" stroke-width="2" />
+            <circle cx="220" cy="220" r="6" fill="#FF7800" />
+            <text x="230" y="210" fill="#C4C8CA" font-size="16">Москва</text>
+            <circle cx="175" cy="205" r="6" fill="#FF7800" />
+            <text x="185" y="195" fill="#C4C8CA" font-size="16">Санкт-Петербург</text>
+            <circle cx="340" cy="238" r="6" fill="#FF7800" />
+            <text x="350" y="228" fill="#C4C8CA" font-size="16">Казань</text>
+            <circle cx="390" cy="242" r="6" fill="#FF7800" />
+            <text x="400" y="232" fill="#C4C8CA" font-size="16">Нижний Новгород</text>
+            <circle cx="520" cy="252" r="6" fill="#FF7800" />
+            <text x="530" y="242" fill="#C4C8CA" font-size="16">Екатеринбург</text>
+            <circle cx="300" cy="290" r="6" fill="#FF7800" />
+            <text x="310" y="280" fill="#C4C8CA" font-size="16">Ростов-на-Дону</text>
+            <circle cx="255" cy="315" r="6" fill="#FF7800" />
+            <text x="265" y="305" fill="#C4C8CA" font-size="16">Краснодар</text>
+            <circle cx="700" cy="245" r="6" fill="#FF7800" />
+            <text x="710" y="235" fill="#C4C8CA" font-size="16">Новосибирск</text>
+          </svg>
+        </div>
+
+        <div class="coverage-footer">
+          <p class="coverage-text">Нужен персонал в вашем городе?</p>
+          <button class="btn btn-primary" onclick="scrollToId('quick')">
+            Обсудить задачу
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK CALC SECTION -->
+    <section id="quick" class="quick-section">
+      <img src="prokadry-09-wide.jpg" alt="Склад" class="quick-bg" />
+      <div class="quick-overlay"></div>
+      <div class="container quick-container">
+        <h2 class="section-title">РАССЧИТАЙТЕ СТОИМОСТЬ ПЕРСОНАЛА</h2>
+        <p class="section-description">Расскажите о задаче - подготовим индивидуальное предложение.</p>
+        
+        <form id="quickForm" class="form-grid" onsubmit="handleQuickSubmit(event)">
+          <label class="form-label">
+            <span class="form-label-text">Количество сотрудников</span>
+            <input type="number" id="staffCount" min="1" value="20" class="form-input" required />
+          </label>
+          <label class="form-label">
+            <span class="form-label-text">Тип персонала</span>
+            <select id="personnelType" class="form-input" required>
+              <option>Комплектовщики</option>
+              <option>Кладовщики</option>
+              <option>Грузчики</option>
+              <option>Разнорабочие</option>
+              <option>Производственный персонал</option>
+              <option>Складской персонал</option>
+              <option>Другое</option>
+            </select>
+          </label>
+          <label class="form-label">
+            <span class="form-label-text">Срок</span>
+            <select id="term" class="form-input" required>
+              <option>До 1 месяца</option>
+              <option selected>1–3 месяца</option>
+              <option>3–6 месяцев</option>
+              <option>Более 6 месяцев</option>
+              <option>Постоянная потребность</option>
+            </select>
+          </label>
+          <label class="form-label">
+            <span class="form-label-text">Город / регион</span>
+            <input type="text" id="region" placeholder="Например, Екатеринбург" class="form-input" required />
+          </label>
+          <label class="form-label full-width">
+            <span class="form-label-text">Телефон</span>
+            <input type="tel" id="quickPhone" placeholder="+7 (___) ___-__-__" value="+7" class="form-input" required />
+          </label>
+          <label class="form-label full-width">
+            <span class="form-label-text">Комментарий</span>
+            <textarea id="comment" rows="4" class="form-input form-textarea"></textarea>
+          </label>
+          <div class="form-buttons full-width">
+            <button type="submit" class="btn btn-primary" id="quickSubmitBtn">
+              Получить расчет
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </button>
+          </div>
+          <div id="quickMessage" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CASES SECTION -->
+    <section id="cases" class="cases-section section-reveal">
+      <div class="container">
+        <h2 class="section-title dark">НАШИ КЕЙСЫ</h2>
+        <p class="section-description dark">Реальные задачи. Конкретные решения. Измеримый результат.</p>
+        <p class="section-note dark">Все кейсы демонстрационные и используются для презентационного макета.</p>
+        
+        <div class="cases-grid">
+          <article class="case-card">
+            <img src="prokadry-09-wide.jpg" alt="Складской комплекс Москва" class="case-image" />
+            <div class="case-content">
+              <h3 class="case-title">Складской комплекс</h3>
+              <p class="case-city">Москва</p>
+              <div class="case-text">
+                <p><b>Задача:</b> Закрыть потребность в персонале в период высокого сезона.</p>
+                <p><b>Решение:</b> Подбор и вывод команды складского персонала.</p>
+                <p><b>Результат:</b> Стабильное обеспечение объекта персоналом.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <img src="prokadry-04-production.jpg" alt="Производственный объект Калуга" class="case-image" />
+            <div class="case-content">
+              <h3 class="case-title">Производственный объект</h3>
+              <p class="case-city">Калуга</p>
+              <div class="case-text">
+                <p><b>Задача:</b> Необходимо обеспечить объект производственным персоналом.</p>
+                <p><b>Решение:</b> Подбор сотрудников под график и специфику производства.</p>
+                <p><b>Результат:</b> Необходимый объем персонала без срывов смен.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <img src="prokadry-10-logistics.jpg" alt="Логистический центр Санкт-Петербург" class="case-image" />
+            <div class="case-content">
+              <h3 class="case-title">Логистический центр</h3>
+              <p class="case-city">Санкт-Петербург</p>
+              <div class="case-text">
+                <p><b>Задача:</b> Пиковая нагрузка в сезон поставок.</p>
+                <p><b>Решение:</b> Оперативное увеличение команды складского персонала.</p>
+                <p><b>Результат:</b> Объект продолжил работу без сбоев.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section">
+      <img src="prokadry-10-logistics.jpg" alt="" class="reviews-bg" />
+      <div class="reviews-overlay"></div>
+      <div class="container reviews-container">
+        <h2 class="section-title">НАС ВЫБИРАЮТ ЗА РЕЗУЛЬТАТ</h2>
+        <p class="reviews-note">Отзывы временные и легко заменяются на реальные.</p>
+        
+        <div class="reviews-slider">
+          <article class="review-card" id="reviewCard">
+            <p class="review-text" id="reviewText"></p>
+            <div class="review-footer">
+              <div class="review-author">
+                <p class="review-company" id="reviewCompany"></p>
+                <p class="review-name" id="reviewName"></p>
+              </div>
+              <div class="review-counter" id="reviewCounter"></div>
+            </div>
+          </article>
+
+          <div class="reviews-controls">
+            <div class="reviews-dots" id="reviewsDots"></div>
+            <div class="reviews-buttons">
+              <button class="review-btn" id="reviewPrev" onclick="previousReview()">
+                <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" style="transform: rotate(180deg)" /></svg>
+              </button>
+              <button class="review-btn" id="reviewNext" onclick="nextReview()">
+                <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+      <img src="prokadry-09-wide.jpg" alt="" class="cta-bg" />
+      <div class="cta-overlay"></div>
+      <div class="container cta-container">
+        <h2 class="cta-title">НУЖЕН ПЕРСОНАЛ?</h2>
+        <p class="cta-subtitle">ЗАКРОЕМ ВАШУ ПОТРЕБНОСТЬ.</p>
+        <p class="cta-description">Расскажите о задаче - подберем оптимальное решение под ваш объект.</p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" onclick="scrollToId('quick')">
+            Получить расчет
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </button>
+          <a href="tel:88005553535" class="btn btn-secondary">Позвонить нам</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS SECTION -->
+    <section id="contacts" class="contacts-section section-reveal">
+      <div class="container">
+        <h2 class="section-title">ОСТАВЬТЕ ЗАЯВКУ</h2>
+        
+        <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-row">
+            <label class="form-label">
+              <span class="form-label-text">Имя</span>
+              <input type="text" id="contactName" class="form-input" required />
+              <span class="form-error" id="nameError"></span>
+            </label>
+            <label class="form-label">
+              <span class="form-label-text">Компания</span>
+              <input type="text" id="contactCompany" class="form-input" required />
+              <span class="form-error" id="companyError"></span>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">
+              <span class="form-label-text">Телефон</span>
+              <input type="tel" id="contactPhone" placeholder="+7 (___) ___-__-__" value="+7" class="form-input" required />
+              <span class="form-error" id="phoneError"></span>
+            </label>
+            <label class="form-label">
+              <span class="form-label-text">Email</span>
+              <input type="email" id="contactEmail" class="form-input" required />
+              <span class="form-error" id="emailError"></span>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="form-label">
+              <span class="form-label-text">Город</span>
+              <input type="text" id="contactCity" class="form-input" required />
+              <span class="form-error" id="cityError"></span>
+            </label>
+            <label class="form-label">
+              <span class="form-label-text">Количество сотрудников</span>
+              <input type="number" id="contactCount" class="form-input" required />
+              <span class="form-error" id="countError"></span>
+            </label>
+          </div>
+
+          <label class="form-label full-width">
+            <span class="form-label-text">Тип персонала</span>
+            <input type="text" id="contactType" class="form-input" required />
+            <span class="form-error" id="typeError"></span>
+          </label>
+
+          <label class="form-label full-width">
+            <span class="form-label-text">Комментарий</span>
+            <textarea id="contactComment" rows="4" class="form-input form-textarea"></textarea>
+          </label>
+
+          <label class="form-checkbox">
+            <input type="checkbox" id="contactAgree" required />
+            <span>Я согласен на обработку персональных данных</span>
+          </label>
+          <span class="form-error" id="agreeError"></span>
+
+          <button type="submit" class="btn btn-primary" id="contactSubmitBtn">
+            Отправить заявку
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </button>
+          <div id="contactMessage" class="form-message"></div>
+          <p class="api-note">Интеграция CRM/Telegram/Email/API подключается через endpoint: /api/leads</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 56 56" class="logo-icon" role="img" aria-hidden="true">
+          <rect x="4" y="4" width="48" height="48" rx="10" fill="#FF7800" />
+          <path d="M16 16h8v12h8V16h8v24h-8v-8h-8v8h-8V16z" fill="#080A0C" />
+          <circle cx="20" cy="40" r="3" fill="#080A0C" />
+          <circle cx="28" cy="40" r="3" fill="#080A0C" />
+          <circle cx="36" cy="40" r="3" fill="#080A0C" />
+        </svg>
+        <div>
+          <p class="logo-title">ПРОКАДРЫ</p>
+          <p class="logo-subtitle">АУТСОРСИНГ ПЕРСОНАЛА</p>
+        </div>
+      </div>
+      <p class="footer-description">Аутсорсинг персонала для складов, производств и логистики</p>
+
+      <div class="footer-column">
+        <p class="footer-title">КОМПАНИЯ</p>
+        <nav class="footer-nav">
+          <a href="#about" onclick="scrollToId('about'); return false">О компании</a>
+          <a href="#services" onclick="scrollToId('services'); return false">Преимущества</a>
+          <a href="#cases" onclick="scrollToId('cases'); return false">Кейсы</a>
+          <a href="#reviews" onclick="scrollToId('reviews'); return false">Отзывы</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-title">УСЛУГИ</p>
+        <div class="footer-nav">
+          <p>Складской персонал</p>
+          <p>Производственный персонал</p>
+          <p>Грузчики</p>
+          <p>Разнорабочие</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-title">ИНФОРМАЦИЯ</p>
+        <nav class="footer-nav">
+          <a href="#process" onclick="scrollToId('process'); return false">Как работаем</a>
+          <a href="#guarantees" onclick="scrollToId('guarantees'); return false">Гарантии</a>
+          <a href="#contacts" onclick="scrollToId('contacts'); return false">Контакты</a>
+          <a href="tel:88005553535">8 800 555 35 35</a>
+          <a href="mailto:info@prokadry.ru">info@prokadry.ru</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© ПРОКАДРЫ, 2026</p>
+      <p>Политика конфиденциальности</p>
+      <p>Согласие на обработку персональных данных</p>
+    </div>
+  </footer>
+
+  <button class="mobile-cta" onclick="scrollToId('quick')">
+    Получить расчет
+    <svg class="arrow-icon" viewBox="0 0 24 24"><path class="svg-stroke" d="M5 12h14M13 6l6 6-6 6" /></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
