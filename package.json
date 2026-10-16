@@ -1,0 +1,6 @@
+{
+  "name": "prokadry", "version": "1.0.0", "private": true,
+  "description": "ПРОКАДРЫ — сайт по утверждённому референсу",
+  "scripts": {"dev": "node server.mjs", "start": "node server.mjs", "check": "node --check dist/app.js && node --check server.mjs"},
+  "engines": {"node": ">=18"}
+}
