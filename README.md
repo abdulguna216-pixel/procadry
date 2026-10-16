@@ -45,3 +45,11 @@ npm run dev
 - `ASSET_PROMPTS.md` — промты встроенного imagegen.
 
 `qa/` не входит в публикацию. Для разработки не нужны ни API-ключи, ни сторонние пакеты.
+
+## GitHub и Vercel
+
+Репозиторий: https://github.com/abdulguna216-pixel/procadry
+
+После клонирования выполните `npm run dev` из корня репозитория. Зависимостей нет. Исходное техническое задание и референс: `docs/BRIEF.md` и `docs/reference.jpg`.
+
+Конфигурация `vercel.json` запускает `npm run check` и публикует `dist/` как статический сайт. Framework Preset: Other, Root Directory: корень репозитория. Для сайта не нужны переменные окружения. Секреты, локальные файлы Vercel и служебные скриншоты исключены из загрузки.
